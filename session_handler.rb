@@ -145,8 +145,8 @@ class MetasploitModule < Msf::Exploit::Remote
       #那么session客户端就会一直存在14444绑定.  再次启动的 msfconsole监听到的session中是无法获取到转发记录的 ! 所以也无法关闭
       #客户端的14444绑定,所以也就无法成功启动! 这个模块了,因为原有端口占用14444无法转流量转发到这个模块的handlerListener port 
       msg="";
-      service.each_tcp_relay1 do |lh, lp, rh, rp, opts,uuid_|  # 这对于上次未被成功关闭的转发记录是没用的 因为 service中没有 relay 记录
-          if uuid_==relay.uuid
+      service.each_tcp_relay do |lh, lp, rh, rp, opts|  # 这对于上次未被成功关闭的转发记录是没用的 因为 service中没有 relay 记录
+          if opts['Reverse'] == true
               # Stop the service
               if service.stop_reverse_tcp_relay(lp)
                 msg="已成功停止上的TCP中继 #{lh || '0.0.0.0'}:#{lp}"
