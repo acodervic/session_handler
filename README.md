@@ -1,6 +1,10 @@
 # session_handler
 a post module of metasploit, bind handler in meterpreter session 
 
+# install 
+copy session_handler.rb to   your metasploit installation folder(modules/exploits/multi) . 
+
+# usage  
 frist you need get a meretpreter session 
 ```bash
 msf6 exploit(multi/handler) > sessions 
