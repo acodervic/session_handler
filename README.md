@@ -1,5 +1,5 @@
 # session_handler
-bind handler in meterpreter session 
+a post module of metasploit, bind handler in meterpreter session 
 
 frist you need get a meretpreter session 
 ```bash
